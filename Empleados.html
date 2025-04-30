@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados - Sistema de Nómina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-bars sidebar-toggle"></i>
+                <span>Sistema de Nómina</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li class="active"><a href="Empleados.html"><i class="fa-solid fa-users"></i> Empleados</a></li>
+                    <li><a href="Nomina.html"><i class="fa-solid fa-file-invoice-dollar"></i> Nómina</a></li>
+                    <li><a href="Reportes.html"><i class="fa-solid fa-chart-bar"></i> Reportes</a></li>
+                    <li><a href="Auditoria.html"><i class="fa-solid fa-user-shield"></i> Auditoría</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>ACCESO RÁPIDO</p>
+                <ul class="item-list">
+                    <li><a href="#"><i class="fa-solid fa-user-plus"></i> Gestión de Usuarios</a></li>
+                    <li><a href="#"><i class="fa-solid fa-calculator"></i> Procesar Pago</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Empleados</h1>
+            </header>
+
+            <div class="navigation">
+                <ul class="tabs">
+                    <li class="tab active"><a href="Empleados.html">Todos</a></li>
+                    <li class="tab"><a href="Empleados-activos.html">Activos</a></li>
+                    <li class="tab"><a href="Empleados-inactivos.html">Inactivos</a></li>
+                </ul>
+            </div>
+
+            <section class="overview-section">
+                <div class="employees-header actions-container">
+                    <h2>Lista de Empleados</h2>
+                    <button class="button button-add">Agregar empleado</button>
+                </div>
+                <div class="actions-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Nombre, correo o ID">
+                        <button class="button button-search"><i class="fa-solid fa-search"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="employees-list-container">
+                <table class="employees-list card-container">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Nombre</th>
+                            <th>ID</th>
+                            <th>Departamento</th>
+                            <th>Estado</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="item-details employee-details">
+                                    <div class="employee-avatar-small">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>María López</td>
+                            <td>00123</td>
+                            <td>Recursos Humanos</td>
+                            <td><span class="employee-status active item-meta">Activo</span></td>
+                            <td>
+                                <div class="employee-actions">
+                                    <button class="button button-icon"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="button button-icon"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-details employee-details">
+                                    <div class="employee-avatar-small">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Juan Pérez</td>
+                            <td>00456</td>
+                            <td>Finanzas</td>
+                            <td><span class="employee-status active item-meta">Activo</span></td>
+                            <td>
+                                <div class="employee-actions">
+                                    <button class="button button-icon"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="button button-icon"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-details employee-details">
+                                    <div class="employee-avatar-small">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Ana Torres</td>
+                            <td>00789</td>
+                            <td>TI</td>
+                            <td><span class="employee-status inactive item-meta">Inactivo</span></td>
+                            <td>
+                                <div class="employee-actions">
+                                    <button class="button button-icon"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="button button-icon"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generación de Reportes - Sistema de Nómina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ </head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-bars sidebar-toggle"></i>
+                <span>Sistema de Nómina</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li class="active"><a href="Empleados.html"><i class="fa-solid fa-users"></i> Empleados</a></li>
+                    <li><a href="Nomina.html"><i class="fa-solid fa-file-invoice-dollar"></i> Nómina</a></li>
+                    <li><a href="Reportes.html"><i class="fa-solid fa-chart-bar"></i> Reportes</a></li>
+                    <li><a href="Auditoria.html"><i class="fa-solid fa-user-shield"></i> Auditoría</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li> 
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>ACCESO RÁPIDO</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-user-plus"></i> Gestión de Usuarios</a></li>
+                    <li><a href="#"><i class="fa-solid fa-calculator"></i> Procesar Pago</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Generación de Reportes</h1>
+            </header>
+
+            <section class="report-generation-section">
+                <div class="report-form chart-container">
+                    <div class="form-group">
+                        <label for="report-type">Tipo de reporte</label>
+                        <div class="input-with-icon select-wrapper activity-details">
+                            <select id="report-type">
+                                <option value="">Seleccione un tipo</option>
+                                <option value="nomina">Reporte de Nómina</option>
+                                <option value="empleados">Reporte de Empleados</option>
+                                <option value="asistencias">Reporte de Asistencias</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="start-date">Fecha de inicio</label>
+                        <div class="input-with-icon activity-details">
+                            <input type="text" id="start-date" placeholder="DD/MM/AAAA">
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end-date">Fecha de fin</label>
+                        <div class="input-with-icon activity-details">
+                            <input type="text" id="end-date" placeholder="DD/MM/AAAA">
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-actions activity-details">
+                        <button class="button1 primary-button">Generar</button>
+                        <button class="button1 secondary-button">Exportar PDF</button>
+                        <button class="button1 cancel-button">Cancelar</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

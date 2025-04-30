@@ -1,0 +1,634 @@
+/*////////////////////////// Botones //////////////////////////////*/
+
+.button1 {
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    padding: 8px 10px; /* Aumentamos el padding */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    font-size: 1.1em; /* Aumentamos el tamaño de la fuente */
+    color: #555; /* Color del icono */
+}
+
+.button1:hover {
+    color: #020000; /* Cambiar el color al pasar el ratón */
+}
+
+
+/*//////////////////////////estructura principal de la página//////////////////////////////*/
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh; /* Para que ocupe al menos el alto de la ventana */
+    /* ... otras propiedades ... */
+}
+
+.sidebar {
+    width: 220px; /* Aumentamos el ancho de la barra lateral */
+    background-color: #e3f2fd;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar-header i {
+    font-size: 1.5em;
+    color: #1976d2; /* Un azul más fuerte para el icono del header */
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    gap: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #bbdefb; /* Un azul más claro al pasar el ratón */
+}
+
+.sidebar-nav ul li a i {
+    font-size: 1.2em;
+    color: #1976d2; /* Color de los iconos de navegación */
+    width: 24px; /* Ancho fijo para alinear los iconos */
+    text-align: center;
+}
+
+.sidebar-footer {
+    padding-top: 20px;
+    border-top: 1px solid #bbdefb;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.sidebar-footer p {
+    margin-bottom: 10px;
+}
+
+.sidebar-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-footer ul li a {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #555;
+    gap: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-footer ul li a:hover {
+    background-color: #bbdefb;
+}
+
+.sidebar-footer ul li a i {
+    font-size: 1em;
+    color: #1976d2;
+    width: 24px;
+    text-align: center;
+}
+
+.main-content {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    margin-left: 220px; /* El mismo ancho que la barra lateral */
+    padding: 20px; /* Añade un poco de padding al contenido principal */
+}
+
+.main-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+/*////////////////////////////////////// Contenedores  /////////////////////////////////////////////*/
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Ajuste para la sección de acciones de empleados */
+.summary-cards.employees-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px; /* Ajustar el margen si es necesario */
+}
+
+.search-box {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input[type="text"] {
+    padding: 8px 12px;
+    border: none;
+    flex-grow: 1;
+}
+
+.search-button {
+    background-color: #f0f0f0;
+    color: #555;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.search-button i {
+    font-size: 1em;
+}
+
+.add-employee-button {
+    background-color: #7b1fa2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.summary-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: left; /* Alineamos el texto a la izquierda en las tarjetas */
+}
+
+.summary-card h4 {
+    margin-top: 0;
+    color: #1976d2;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el icono y el texto del título */
+}
+
+.summary-card h4 i {
+    font-size: 1.5em;
+}
+
+.summary-card .total {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.summary-card .count,
+.summary-card .amount,
+.summary-card .alerts {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.summary-card .count.active {
+    color: #28a745;
+}
+
+.summary-card .alerts.no-incidents {
+    color: #28a745;
+}
+
+.summary-card p:last-child {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+
+/*////////////////////////////////////// barras  /////////////////////////////////////////////*/
+
+.chart-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    height: 150px;
+    gap: 10px;
+    width: 100%;
+}
+
+.bar {
+    background-color: #1976d2;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    padding-bottom: 5px;
+    flex-grow: 1;
+    width: auto;
+}
+
+.bar span {
+    margin-top: auto;
+}
+
+
+.recent-activities-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; /* Línea divisoria suave */
+    display: flex; /* Para alinear la información y las acciones en la lista de empleados */
+    justify-content: space-between; /* Espacio entre la información del empleado y las acciones */
+    align-items: center; /* Centrar verticalmente la información y las acciones */
+}
+
+.activity-item:last-child {
+    border-bottom: none; /* Eliminar la línea inferior del último elemento */
+}
+
+.activity-details {
+    display: flex; /* Usamos flex para alinear el avatar y la información del empleado */
+    align-items: center; /* Centrar verticalmente */
+    gap: 15px; /* Espacio entre el avatar y la información */
+}
+
+.activity-details i { /* Estilo para los iconos en la sección de actividades */
+    font-size: 1.2em; /* Tamaño del icono */
+    color: #1976d2; /* Color del icono (azul) */
+    width: 30px; /* Ancho fijo para el icono, para que el texto se alinee bien */
+    text-align: center; /* Centrar el icono dentro de su espacio */
+}
+
+.activity-title { /* Estilo para el nombre del empleado */
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3px;
+    margin-left: 0; /* Resetear cualquier margen anterior */
+}
+
+.activity-meta {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+/* Estilos específicos para la información del empleado */
+.employee-info {
+    display: flex;
+    flex-direction: column; /* Apila el nombre, ID y departamento verticalmente */
+}
+
+.employee-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #777;
+}
+
+.employee-status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85em;
+}
+
+.employee-status.active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.employee-status.inactive {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Estilos para los botones de acción en la lista de empleados */
+.employee-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.employee-actions button {
+    padding: 5px 8px;
+    font-size: 0.9em;
+}
+
+/* Estilos específicos para el formulario de reportes */
+.report-form .form-group {
+    margin-bottom: 20px;
+}
+
+.report-form label {
+    display: block; /* Asegurar que la etiqueta ocupe una línea completa */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.report-form .select-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex; /* Para alinear el select y el icono */
+    align-items: center;
+}
+
+.report-form .select-wrapper select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    appearance: none;
+    background-color: white;
+    color: #555;
+    font-size: 1em;
+    flex-grow: 1; /* Para que el select ocupe el espacio */
+}
+
+.report-form .select-wrapper i {
+    color: #777;
+    padding-right: 10px;
+}
+
+.report-form .input-with-icon {
+    position: relative;
+    display: flex; /* Para alinear el input y el icono */
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.report-form .input-with-icon input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 1em;
+    color: #555;
+    flex-grow: 1;
+}
+
+.report-form .input-with-icon i {
+    color: #777;
+    padding-right: 10px;
+}
+
+.report-form .form-actions {
+    display: flex; /* Usamos flex para alinear los botones */
+    gap: 10px;
+    justify-content: flex-start; /* Alinear los botones a la izquierda */
+    align-items: center;
+    margin-top: 20px; /* Añadir un poco de espacio sobre los botones */
+}
+
+/* Estilos específicos para los botones (ya definidos anteriormente) */
+.primary-button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.primary-button:hover {
+    background-color: #115293;
+}
+
+.secondary-button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.navigation {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Línea sutil debajo de las pestañas */
+}
+
+.navigation .tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-end; /* Alinea las pestañas en la parte inferior del contenedor */
+}
+
+.navigation .tab {
+    margin-right: 20px;
+}
+
+.navigation .tab a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #555; /* Color de texto similar a los enlaces inactivos */
+    font-size: 1em;
+    border-radius: 5px 5px 0 0; /* Pequeño borde redondeado en la parte superior */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+}
+
+.navigation .tab a:hover {
+    color: #333; /* Color de texto al pasar el ratón */
+    background-color: #f9f9f9; /* Fondo sutil al pasar el ratón */
+}
+
+  /* Estilos adicionales específicos para esta sección, intentando usar convenciones existentes */
+  .employees-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.employees-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input[type="text"] {
+    padding: 10px;
+    border: none;
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    color: #777;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    color: #333;
+}
+
+.add-employee-button {
+    background-color: #7950f2; /* Un tono de morado */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.add-employee-button:hover {
+    background-color: #5e35b1;
+}
+
+.employees-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.employees-list th, .employees-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.employees-list th {
+    font-weight: bold;
+    color: #333;
+}
+
+.employee-row {
+    display: flex;
+    align-items: center;
+}
+
+.employee-avatar-small {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.employee-avatar-small i {
+    font-size: 0.9em;
+}
+
+.employee-actions { /* Reutilizamos .employee-actions */
+    display: flex;
+    gap: 10px;
+}
+
+.employee-actions button { /* Reutilizamos estilos de botón en acciones */
+    background: none;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.employee-actions button:hover { /* Reutilizamos hover de botón */
+    color: #333;
+}
+
+.employee-status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.employee-status.active {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.employee-status.inactive {
+    background-color: #ffebee;
+    color: #d32f2f;
+}

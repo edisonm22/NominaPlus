@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Principal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-bars sidebar-toggle"></i>
+                <span>Sistema de Nómina</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li class="active"><a href="Empleados.html"><i class="fa-solid fa-users"></i> Empleados</a></li>
+                    <li><a href="Nomina.html"><i class="fa-solid fa-file-invoice-dollar"></i> Nómina</a></li>
+                    <li><a href="Reportes.html"><i class="fa-solid fa-chart-bar"></i> Reportes</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-shield"></i> Auditoría</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>ACCESO RÁPIDO</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-user-plus"></i> Gestión de Usuarios</a></li>
+                    <li><a href="#"><i class="fa-solid fa-calculator"></i> Procesar Pago</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Inicio</h1>
+            </header>
+
+            <section class="overview-section">
+                <h2>Panel Principal</h2>
+            </section>
+
+            <section class="summary-section">
+                <h3>Resumen General</h3>
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <h4><i class="fa-solid fa-users"></i> Empleados</h4>
+                        <p class="total">Total empleados</p>
+                        <p class="count">0</p>
+                    </div>
+                    <div class="summary-card">
+                        <h4><i class="fa-solid fa-file-invoice-dollar"></i> Nómina</h4>
+                        <p class="total">Último pago</p>
+                        <p class="amount">0</p>
+                    </div>
+                    <div class="summary-card">
+                        <h4><i class="fa-solid fa-chart-bar"></i> Reportes</h4>
+                        <p class="total">Pendientes</p>
+                        <p class="count">0</p>
+                    </div>
+                    <div class="summary-card">
+                        <h4><i class="fa-solid fa-user-shield"></i> Auditoría</h4>
+                        <p class="total">Alertas</p>
+                        <p class="count">Sin incidencias</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="payroll-summary-section">
+                <h3>Resumen de Nómina</h3>
+                <div class="chart-container">
+                    <div class="bar-chart">
+                        <div class="bar" style="height: 11%;"><span>Ene</span></div>
+                        <div class="bar" style="height: 11%;"><span>Feb</span></div>
+                        <div class="bar" style="height: 11%;"><span>Mar</span></div>
+                        <div class="bar" style="height: 11%;"><span>Abr</span></div>
+                        <div class="bar" style="height: 11%;"><span>May</span></div>
+                        <div class="bar" style="height: 20%;"><span>Jun</span></div>
+                        <div class="bar" style="height: 11%;"><span>Jul</span></div>
+                        <div class="bar" style="height: 11%;"><span>Ago</span></div>
+                        <div class="bar" style="height: 11%;"><span>Sep</span></div>
+                        <div class="bar" style="height: 11%;"><span>Oct</span></div>
+                        <div class="bar" style="height: 11%;"><span>Nov</span></div>
+                        <div class="bar" style="height: 11%;"><span>Dic</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-activities-section">
+                <h3>Actividades Recientes</h3>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <div class="activity-details">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p class="activity-title">Nuevo empleado registrado</p>
+                            <p class="activity-meta">María López - 10/06/2024</p>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-details">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <p class="activity-title">Nómina procesada</p>
+                            <p class="activity-meta">Mayo 2024 - 05/06/2024</p>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-details">
+                            <i class="fa-solid fa-chart-bar"></i>
+                            <p class="activity-title">Reporte generado</p>
+                            <p class="activity-meta">Costos laborales - 01/06/2024</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

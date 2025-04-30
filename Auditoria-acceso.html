@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesos - Auditoría - Sistema de Nómina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-bars sidebar-toggle"></i>
+                <span>Sistema de Nómina</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li class="active"><a href="Empleados.html"><i class="fa-solid fa-users"></i> Empleados</a></li>
+                    <li><a href="Nomina.html"><i class="fa-solid fa-file-invoice-dollar"></i> Nómina</a></li>
+                    <li><a href="Reportes.html"><i class="fa-solid fa-chart-bar"></i> Reportes</a></li>
+                    <li><a href="Auditoria.html"><i class="fa-solid fa-user-shield"></i> Auditoría</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>ACCESO RÁPIDO</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-user-plus"></i> Gestión de Usuarios</a></li>
+                    <li><a href="#"><i class="fa-solid fa-calculator"></i> Procesar Pago</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="section">
+                <div class="navigation">
+                    <ul class="tabs">
+                        <li class="tab"><a href="Auditoria.html">Registros</a></li>
+                        <li class="tab active"><a href="Auditoria-acceso.html">Accesos</a></li>
+                        <li class="tab"><a href="Auditoria-cambios.html">Cambios</a></li>
+                    </ul>
+                </div>
+
+                <section class="access-history-section chart-container">
+                    <h3>Historial de accesos</h3>
+                    <ul class="access-list activity-list">
+                        <li class="access-item activity-item">
+                            <div class="activity-details">
+                                <div class="employee-avatar">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <div class="employee-info">
+                                    <p class="activity-title access-user">María López</p>
+                                    <p class="activity-meta access-ip">IP: 192.168.1.10</p>
+                                    <p class="activity-meta access-date">Fecha: 01/06/2024</p>
+                                    <p class="activity-meta access-status"><span class="status-success">Estado: Exitoso</span></p>
+                                </div>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="button1 view-details-button"><i class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </li>
+                        <li class="access-item activity-item">
+                            <div class="activity-details">
+                                <div class="employee-avatar">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <div class="employee-info">
+                                    <p class="activity-title access-user">Juan Pérez</p>
+                                    <p class="activity-meta access-ip">IP: 192.168.1.22</p>
+                                    <p class="activity-meta access-date">Fecha: 31/05/2024</p>
+                                    <p class="activity-meta access-status"><span class="status-failed">Estado: Fallido</span></p>
+                                </div>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="button1 view-details-button"><i class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </li>
+                        <li class="access-item activity-item">
+                            <div class="activity-details">
+                                <div class="employee-avatar">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <div class="employee-info">
+                                    <p class="activity-title access-user">Ana Torres</p>
+                                    <p class="activity-meta access-ip">IP: 192.168.1.33</p>
+                                    <p class="activity-meta access-date">Fecha: 30/05/2024</p>
+                                    <p class="activity-meta access-status"><span class="status-success">Estado: Exitoso</span></p>
+                                </div>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="button1 view-details-button"><i class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
