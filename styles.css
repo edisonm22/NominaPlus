@@ -632,3 +632,81 @@ h3 {
     background-color: #ffebee;
     color: #d32f2f;
 }
+
+/*////////////////////////// Estilos de la página de Login ////////////////////////////*/
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7f6; /* Fondo claro */
+}
+
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.login-box h1 {
+    font-size: 2em;
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.login-box h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.login-box .form-group {
+    margin-bottom: 20px;
+}
+
+.login-box label {
+    display: block;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.login-box .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #555;
+}
+
+.login-box button.primary-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.login-box button.primary-button:hover {
+    background-color: #115293;
+}
+
+
+/* Añadir la imagen de fondo */
+.body {
+    background-image: url('https://www.elextremosur.com/nota/34578-el-2021-se-caracteriza-por-la-renuncia-de-trabajadores-por-explotacion-laboral');
+    background-size: cover; /* La imagen cubre toda la pantalla */
+    background-position: center; /* La imagen está centrada */
+    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    margin: 0; /* Elimina márgenes por defecto */
+}
